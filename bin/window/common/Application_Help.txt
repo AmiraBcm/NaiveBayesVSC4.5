@@ -1,0 +1,87 @@
+Welcome to our graduation application ALPA “Academic Licence Project Application”!
+
+ With this application you can analyze and modify your data, classify it by using Machine Learning classifiers (Naïve Bayes and the C4.5) as well as visualizing it in different graphs.
+ The application is presented as follow:
+	1.	Menu Bar
+	2.	Preprocess tab
+	3.	Classify tab
+	4.	Visualize tab
+ The menu bar includes three menus:
+	1.1.	File menu:  which contains three items:
+		1.1.1.	Open (ctrl +O): for opening .arff and .csv  files.
+		1.1.2.	Save (ctrl +S):  for saving files after modifications.
+		1.1.3.	Exit (ctrl +E): to leave the application.
+	1.2.	Edit menu: This menu allows you to modify the information contained in your data file. It contains three items:
+		1.2.1.	Rename (ctrl +R): to change the relation name or the attribute names. To confirm click on OK.
+		1.2.2.	Delete (ctrl +D): to delete attributes or instances. Down below are the instructions to follow in order to:
+			a.	delete an attribute :
+			i.	Click on the “Delete attribute “ button (on the left).
+			ii.	Choose the attribute you want to remove.
+			iii.	Click the “OK” button to confirm, or exit the delete frame on the contrast.
+			The removal operation can always be canceled by clicking on the “Cancel” button of the Edit frame. 
+			b.	delete an instance :
+			i.	Select the desired instance from the table of instances of the Edit frame.
+			ii.	Click on the “Delete instance” button.
+			iii.	Confirm by clicking on the “OK” button, or the “Cancel” button in case you want to cancel the operation.
+
+		1.2.3.	 Add (ctrl +A): to add any instances you desire. To add an instance follow the coming instructions: 
+			i.	Click on the “Add instance” button (on the left).
+			ii.	Modify the values of the new instance (this one will be placed at the end).
+			PS: You should take in consideration in case of a numeric attribute, entering alphabetic characters isn’t allowed and in that case it will automatically be changed by 0.
+			iii.	Validate the created instance by clicking on the “Validate” button (on the left).
+					  However you can cancel all the instances added by clicking on the” Cancel” button.	
+		1.2.4.	View (ctrl +V): this last item visualizes the opened file, by displaying the relation name, the attributes names and the different instances.
+    1.3 Help menu: which displays this current text.
+	
+ After the menu bar comes the three following tabs:
+	1 Preprocess tab:
+	This tab contains all the statics about the opened file and it is presented in three different panels:
+		1.1	The “Current Relation” panel: shows the relation name, the number of attributes (including the target attribute), the number of instances and its sum of weight.
+		1.2	The “Attributes list” panel: lists the attributes and indicates the class attribute.
+		1.3	The “Selected Attribute” panel: is divided into two parts.
+		Once an attribute is selected, the first part shows its name, its type (numeric or nominal), and three statistics: missing, distinct and unique which represent respectively the number of the missing, distinct and unique values of the attribute in the data set.
+		The second part depends on the type of the attribute; it shows the attributes value table in case of a nominal attribute(label, count and Weight) and the statistical information table in case of a numeric attribute(the minimum value, the maximum value, the mean and the standard deviation of the attribute values).
+	
+	2 Classify tab:
+	This tab allows you to classify the open file’s data; it is divided into two parts:
+	The first one concerns the classification criteria and the second part, the results obtained from the classification.
+	The first part of the “Classify” tab contains four panels:
+		2.1	 The “Test option” panel: this panel contains two testing methods: the cross validation and the percentage split and two text fields to specify the number of the folds and the percentage for them respectively.
+		2.2	 The “Attributes Selection” panel : this panel allows you to select a set of attributes that reaches a higher classification accuracy comparing to the initial attributes set(the complete set) .
+		2.3	 The “Classifier” panel:  this panel allows you to choose a classifier among Naïve Bayes and C4.5, or to compare their performances by choosing (Naive Bayes VS C4.5).
+		2.4	   The “Class Attribute” panel: this panel allows you to specify the target attribute (class label).
+	And finally the “Start” button to start the classification.
+	
+	The results including: the model built, the evaluation measures, the time taken to classify data  and many other details are displayed on the text area.
+	In order to classify your data, these are the steps to follow:
+		(1)	Choose the testing method (cross validation or percentage split).
+		(2)	If you want to make a selection on the attributes set, you should choose one    of the two given   classifiers (naïve bayes or c4.5).
+			PS: the selection algorithm uses a classifier as well as the information of the test options section, that’s why both classifiers are given for the selection task.
+			Click on the “Launch” button to start the process. The text area shows the results obtained (the remaining /removed attributes, the time taken...etc).
+			Once the selection is done, the button “Save as file” allows you to save a file preserving the relation name of the opened file, the selected attributes and the instances (keeping only the values of the selected attributes and the target one). 
+
+			If you do not want a selection on the attributes set, choose the “None” option.
+
+		(3)	Choose a classifier from the “Classifier” panel in order to classify your data.
+		(4)	Click on the “Start” button to start the classification.
+		
+	The results will be displayed on the text area.
+	
+	3 Visualize tab:
+	This last tab displays the open file’s data in graphs for a better analysis. The Visualize tab is organized in three panels:
+	3.1	The “Axis variants” panel: it contains two combo boxes to select  x-axis and y-axis values as well as it contains the “Update” button.
+	3.2	The “Graphics” panel: it contains all the possible graphical representations 
+	(Histogram : for a numeric domain; i.e  x-axis, Bar Chart: for a nominal domain, and Pie chart: for the same nominal attribute selected as a domain and a range).
+	3.3	And finally, the last panel that displays the selected graph.
+	To display a certain graph follow these steps:
+	i.	Choose from the “Axis variants” panel the domain and range of your graph.
+	ii.	Select the graphic form from the “Graphics” panel.
+	iii.	Click on the “Display” button and watch your graph being displayed on the main panel.
+	Things to take in consideration:
+	•	Once the domain and range are specified, only the possible corresponding graphs are enabled.
+	•	In case of a numeric domain and a nominal range, an interval table will be displayed on a frame as an addition to give each number on the graph’s domain its corresponding interval with its value.
+	•	The icon button in the “Graphs” panel allows you to display your graph on an independent frame.
+	•	After modifying your data(Edit->{Delete,Add}), you must click on the “Update” button in the “Axis variants” panel to update the information represented in your graph.
+  
+  
+                  *****************************End**********************************
